@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    body {
+      background-color: #ffb703;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 80px);
+      gap: 10px;
+      justify-content: center;
+      margin: 200px;
+      background: linear-gradient(to right, yellow, #ffb703);
+      padding: 20px;
+    }
+    input {
+      grid-column: span 3;
+      padding: 10px;
+      font-size: 18px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+    button {
+      padding: 15px;
+      font-size: 18px;
+      background-color: yellow;
+      box-shadow: 2px 4px 8px coral;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- ✅ Change number input to text -->
+    <input class="d1" type="text" readonly>
+    <button class="button">1</button>
+    <button class="button">2</button>
+    <button class="button">3</button>
+    <button class="button">4</button>
+    <button class="button">5</button>
+    <button class="button">6</button>
+    <button class="button">7</button>
+    <button class="button">8</button>
+    <button class="button">9</button>
+    <button class="button">+</button>
+    <button class="button">-</button>
+    <button class="button">/</button>
+    <button class="button">*</button>
+    <button class="button">=</button>
+    <button class="button">%</button>
+    <button class="button">C</button>
+  </div>
+
+  <script>
+    let display = document.querySelector(".d1");
+let buttons = document.querySelectorAll(".button");
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    let value = button.textContent;
+
+    if (value === "=") {
+      try {
+        display.value = eval(display.value); // evaluate the expression
+      } catch {
+        display.value = "error";
+      }
+    } 
+    else if (value === "C") {
+      display.value = ""; // clear the display
+    } 
+    else {
+      display.value += value; // append numbers/operators
+    }
+  });
+});
+
+  </script>
+</body>
+</html>

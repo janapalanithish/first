@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: linear-gradient(to right,yellow,greenyellow);
+    }
+.b1{
+    display: grid;
+    grid-template-columns: repeat(3,60px);
+    height: 400px;
+    width: 200px;
+    position:relative;
+    left: 500px;
+    top: 200px;
+   
+}
+.ip{
+    width: 170px;
+    position:relative;
+    height: 50px;
+    left: 500px;
+    top: 200px;
+}
+</style>
+<body>
+    <input type="text" class="ip">
+    
+    <nav class="b1">
+        <button onclick="getmessage()">1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>*</button>
+        <button>/</button>
+        <button>%</button>
+        <button>+</button>
+        <button>-</button>
+        <button>=</button>
+        <button>/</button>
+        <button>#</button>
+        <button>$</button>
+
+        </nav>
+    <script >
+        button.forEach(button => {
+            addEventListener('click' , (e) => {
+                const buttonval = e.target.innertext
+            })
+        });
+    </script>
+</body>
+</html>

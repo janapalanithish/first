@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code For You</title>
+  <link rel="stylesheet" href="codeforyou.css">
+</head>
+<body>
+  <div class="c4">the perfect coding for this gen.....</div>
+  <h1>/> code🔹 for you</h1>
+  
+  <div class="nav-bar">
+    <a class="id1" href="#">home</a>
+    <a class="id2" href="#">courses</a>
+    <a class="id3" href="#">tutorial</a>
+    <a class="id4" href="#">blog</a>
+    
+    <a id="login-btn">login</a> <a class="id6" href="#">sign up</a>
+    <a class="id7" href="#">🌓</a>
+    <a class="id8" href="#">search...</a>
+  </div>
+  
+  <div id="login-modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>User Login</h2>
+      <form>
+        <div class="input-group">
+          <label for="username">Username / Email</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+      <p style="text-align: center; margin-top: 15px; font-size: 0.8em;">
+        <a href="#" style="color: #8888ac; text-decoration: none;">Forgot Password?</a>
+      </p>
+    </div>
+  </div>
+  <div class="card-container">
+    <p class="c1">HTML:html is majory used for text purpose for a webpages.To derive the basic terms in the webpages.html gives a well desingned text which is useful for
+      the website desingning.therefore html is used for only text purpose only.
+    </p>
+    <p class="c2">css: website which showcases the outline is css.this text styling gives better understanding and point of view 
+      for the desingner.just like when you move the cursor on the text it changes the white color text to another color.
+    </p>
+    <p class="c3">JAVASCRIPT:Validate form inputs
+      Create interactive content (e.g., sliders, dropdowns)
+      Manipulate HTML/CSS using the DOM
+      Handle browser events like clicks, keypresses.
+      we can even do more by JAVASCRIPT compared to css and html.
+    </p>
+  </div>
+  
+  <script>
+    // Get the modal, the button that opens it, and the element that closes it
+    const modal = document.getElementById('login-modal');
+    const btn = document.getElementById('login-btn');
+    const span = document.getElementsByClassName('close-btn')[0];
+
+    // When the user clicks the login button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>

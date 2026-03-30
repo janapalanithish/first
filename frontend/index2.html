@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator 2</title>
+  <style>
+    body{
+      background-color: skyblue;
+    }
+    .i1{
+      background-color: white;
+      grid-column: span 3;
+      padding: 10px;
+    }
+    .container{
+      display: grid;
+      grid-template-columns: repeat(3,80px);
+      justify-content: center;
+      background: linear-gradient(to right,#c1d3fe,#c1d3fe);
+      margin: 100px;
+    }
+    .b1{
+      padding: 15px;
+      border: 1px solid;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <input type="text" class="i1" readonly>
+    <button class="b1">1</button>
+    <button class="b1">2</button>
+    <button class="b1">3</button>
+    <button class="b1">4</button>
+    <button class="b1">5</button>
+    <button class="b1">6</button>
+    <button class="b1">7</button>
+    <button class="b1">8</button>
+    <button class="b1">9</button>
+    <button class="b1">*</button>
+    <button class="b1">/</button>
+    <button class="b1">-</button>
+    <button class="b1">+</button>
+    <button class="b1">0</button>
+    <button class="b1">%</button>
+    <button class="b1">C</button>
+    <button class="b1">=</button>
+  </div>
+
+  <script>
+    let buttons = document.querySelectorAll(".b1");
+    let display = document.querySelector(".i1");
+    buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    let btnValue = button.textContent;
+
+    if (btnValue === "C") {
+      display.value = "";  // clear
+    } 
+    else if (btnValue === "=") {
+      try {
+        display.value = eval(display.value); // calculate expression
+      } catch {
+        display.value = "error";
+      }
+    } 
+    else {
+      display.value += btnValue; // append numbers/operators
+    }
+  });
+});
+
+  </script>
+</body>
+</html>

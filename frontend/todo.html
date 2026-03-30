@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #6dd5ed, #2193b0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .todo-container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    h2 {
+      text-align: center;
+    }
+    input {
+      width: 80%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 8px 12px;
+      margin-left: 5px;
+      background: #2193b0;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 15px;
+    }
+    li {
+      background: #f1f1f1;
+      margin: 5px 0;
+      padding: 8px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    li.completed {
+      text-decoration: line-through;
+      color: gray;
+    }
+    .delete-btn {
+      background: red;
+      border: none;
+      color: white;
+      padding: 5px 8px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  
+    <h2>My To-Do List</h2>
+    <input type="text" class="taskInput" placeholder="Enter task...">
+    <button class="addBtn">Add</button>
+    <ul class="taskList"></ul>
+  </div>
+
+  <script>
+
+    let button = document.querySelector(".addbtn");
+    let display = document.querySelector(".taskInput");
+    button.addEventListener("click" , () => {
+        let task = textInput.textContent;
+    })
+  </script>
+</body>
+</html>
